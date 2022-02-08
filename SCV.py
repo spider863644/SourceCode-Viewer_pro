@@ -90,7 +90,7 @@ def loop():
         t.sleep(5)
         os.system("""
         cd
-        rm -f -r SourceCode-Viewer_Pro
+        rm  SourceCode-Viewer_pro
         cd $HOME
         git clone https://github.com/spider863644/SourceCode-Viewer_pro
         """)
