@@ -1,5 +1,6 @@
 #!/usr/python3
 import os, time as t
+os.system("apt install figlet")
 #Colors
 white = '\033[0;37;40m'
 green = '\033[1;32;40m'
@@ -47,7 +48,7 @@ def loop():
     print(blue + """
 [1] Get source code of a webpage {https  site only}
 [2] Get source code of a webpage {http sites only}
-[3] Update scripts
+[3] Update script
 [4] Join my WhatsApp group to colabborate with me
 [5] Exit Program
 """ )
@@ -90,6 +91,7 @@ def loop():
         os.system("""
         cd
         rm -f -r SourceCode-Viewer_Pro
+        cd $HOME
         git clone https://github.com/spider863644/SourceCode-Viewer_pro
         """)
         print(cyan + """Type the following Commands below
@@ -101,7 +103,7 @@ def loop():
         os.system("clear")
         print(redyellow + "Redirecting to my WhatsApp group" + load + "..." + white)
         t.sleep(4)
-        os.system("xdg-open https://chat.whataspp.com/BivW6pA9Emu9bDM2rZkaQy")
+        os.system("xdg-open https://chat.whatsapp.com/BivW6pA9Emu9bDM2rZkaQy")
         loop()
     elif choice == 5:
         print(red + "Thanks for you using my script\nAllow report any issue you face when using this tool so we can make a better version")
@@ -110,4 +112,4 @@ def loop():
     cont = input(redyellow + "Do you wanna continue?[y/n] " + white)
     if cont == "y" or cont == "Y":
         loop()
-loop()
+loop() 
