@@ -43,7 +43,7 @@ banner = pyfiglet.figlet_format("SourceCode-Viewer")
 def loop():
     os.system('clear')
     print(yellow + banner)
-    print(red +"version 2.5".center(60) + white)
+    print(red +"version 2.6".center(60) + white)
     print(yellow + plus + " Tool Name: Source Code Viewer\n" + yellow + plus +  " Creator: Spider Anongreyhat\n" + yellow + plus + " Team: TermuxHackz Society\n" + yellow + plus + " Github: https://github.com/spider863644\n" + yellow + plus + " WhatsApp: +2349052863644" + white)
     print(" ")
     print(blue + """
@@ -103,7 +103,9 @@ def loop():
         file.write((url.text))
         file.close()
         print(blue + url.text)
-        print(green + "\n\nFile has been saved as " + filename + ".html")
+        move = "mv " + filename + ".html /sdcard"
+        os.system(move)
+        print(green + "\n\nFile has been saved as " + filename + ".html in internal home storage" )
     elif choice == 3:
         os.system("clear")
         t.sleep(4)
@@ -127,8 +129,11 @@ def loop():
         os.system("xdg-open https://chat.whatsapp.com/IWqGOsJPjkp2vXcMSJKYns")
         loop()
     elif choice == 5:
-        print(red + "Thanks for you using my script\nAllow report any issue you face when using this tool so we can make a better version")
+        print(red + "Thanks for you using my script\nAlways report any issue you face when using this tool so we can make a better version")
         t.sleep(3)
+        exit()
+    else:
+        print(Fore.RED + "Invalid option")
         exit()
     cont = input(redyellow + "Do you wanna continue?[y/n] " + white)
     if cont == "y" or cont == "Y":
